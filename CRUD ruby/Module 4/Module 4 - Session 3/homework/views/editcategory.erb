@@ -1,0 +1,13 @@
+<tbody>
+    <% orders.each do |order| %>
+    <tr>
+        <td><%= order.reference_no %></td>
+        <td><%= order.customer_name %></td>
+        <td><%= order.date %></td>
+        <td><a href="/form/edit/order/<%= order.reference_no %>">Edit</a></td>
+        <td><a href="/delete/order/<%= order.reference_no %>">Delete</a></td>
+        <td><a href="/form/add/item/<%= order.reference_no %>">Add item</a></td>
+        <td><a href="/order/<%= order.reference_no %>/item/list">List Item</a></td>
+    </tr>
+    <% end %>
+</tbody>
